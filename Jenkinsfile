@@ -11,7 +11,7 @@ pipeline {
                 sh 'docker volume prune -f'
                 sh 'docker volume create volin'
                 sh 'docker run -v volin:/data --name buffer ubuntu'
-                sh 'cd ~/ && find irssi || git clone https://github.com/irssi/irssi.git/'
+                sh 'cd ~/ && find irssi || https://github.com/Michal200x/isiri.git/'
                 sh 'docker cp ~/irssi buffer:/data'
                 sh 'docker rm buffer'
                 echo 'Cloning...'
